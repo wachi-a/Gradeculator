@@ -116,6 +116,7 @@ export function AuthPanel({ onGuest, onAuthenticated, onClose, initial = 'login'
       <div className="account-badge"><img src={`${import.meta.env.BASE_URL}icons/logo-round.svg`} alt="" className="auth-brand-logo"/></div>
       <div className="eyebrow">GRADEHUB ACCOUNT</div>
       <h1>{title}</h1>
+      {!isOverlay && <p className="account-intro">Gradeculator โปรแกรมคำนวณเกรดเฉลี่ย GPA และ GPAX ออนไลน์ฟรี สำหรับนักศึกษา ใช้บันทึกคะแนนรายวิชา คิดเกรดเฉลี่ยมหาวิทยาลัย และวางแผนเกรดเป้าหมายได้ทั้งมือถือและคอมพิวเตอร์</p>}
       <p className="account-intro">ล็อกอินเพื่อซิงก์ข้อมูลรายวิชาและคะแนนระหว่างเว็บไซต์กับโทรศัพท์ หรือใช้งานแบบ Guest โดยเก็บข้อมูลไว้ในเครื่อง</p>
       {!cloudConfigured ? <div className="account-setup-warning"><CloudOff size={20}/><span>ยังไม่ได้เชื่อมต่อฐานข้อมูลออนไลน์ กรุณาตั้งค่า Supabase ตามคู่มือ SETUP_LOGIN.md ก่อน จึงจะสมัครสมาชิกและเข้าสู่ระบบได้</span></div> :
         <form onSubmit={handleSubmit} className="account-form" autoComplete="off">

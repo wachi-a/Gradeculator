@@ -9,7 +9,8 @@ for (const [source, dest, width] of [
   ['logo-app.svg','icon-512-v2.png',512],
   ['logo-maskable.svg','maskable-512-v2.png',512],
   ['logo-app.svg','apple-touch-icon-v2.png',180],
-  ['logo-round.svg','favicon-32-v2.png',32]
+  ['logo-round.svg','favicon-32-v2.png',32],
+  ['logo-round.svg','favicon.png',96]
 ]) {
   const svg = readFileSync(resolve(folder, source), 'utf8');
   const png = new Resvg(svg, { fitTo: { mode: 'width', value: width }}).render().asPng();
